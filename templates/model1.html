@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ML Prediction Model 1</title>
+    <style>
+        body { font-family: 'Georgia', 'Arial Rounded MT Bold', sans-serif; margin: 40px; background-color: #f0f8ff; color: #333; }
+        input, select { margin-bottom: 10px; width: 300px; padding: 8px; font-size: 16px; }
+        button { padding: 10px 15px; background-color: #ffccf9; color: white; border: none; border-radius: 15px; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        button:hover { background-color: #f28fb0; }
+        nav ul { padding: 0; list-style-type: none; }
+        nav ul li { display: inline; margin-right: 10px; }
+        label { display: block; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/model1">Model 1</a></li>
+            <li><a href="/model2">Model 2</a></li>
+        </ul>
+    </nav>
+    <h1></h1>
+    <form method="post">
+        <label>Age (Years):</label>
+        <input type="number" name="age" placeholder="Age"><br>
+        <label>Resting Blood Pressure (mmHg):</label>
+        <input type="number" name="resting bp s" placeholder="Resting BP"><br>
+        <label>Cholesterol (mg/dl):</label>
+        <input type="number" name="cholesterol" placeholder="Cholesterol"><br>
+        <label>Fasting Blood Sugar (mg/dl):</label>
+        <input type="number" name="fasting blood sugar" placeholder="Fasting Blood Sugar"><br>
+        <label>Max Heart Rate (BPM):</label>
+        <input type="number" name="max heart rate" placeholder="Max Heart Rate"><br>
+        <label>Sex:</label>
+        <select name="sex">
+            <option value="0">Female</option>
+            <option value="1">Male</option>
+        </select><br>
+        <label>Chest Pain Type:</label>
+        <select name="chest pain type">
+            <option value="1">Typical Angina</option>
+            <option value="2">Atypical angina</option>
+            <option value="3">Non-anginal pain</option>
+            <option value="4">Asymptomatic</option>
+        </select><br>
+        <label>Exercise Angina:</label>
+        <select name="exercise angina">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br>
+        <button type="submit">Predict</button>
+    </form>
+    <h2>Prediction: {{ prediction }}</h2>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home - ML Models</title>
+    <style>
+        body { 
+            font-family: 'Helvetica', 'Arial Rounded MT Bold', sans-serif; 
+            margin: 0; 
+            background-color: #f0f8ff; 
+            color: #333; 
+        }
+        .content {
+            padding: 20px; /* Uniform padding */
+        }
+        input, select, .btn-group button, a { 
+            margin-top: 10px; 
+            padding: 8px; 
+            width: 300px; 
+            display: block; 
+            font-size: 16px; 
+            text-align: center; 
+            text-decoration: none; 
+            cursor: pointer; 
+        }
+        a, .btn-group button {
+            background-color: #b32400; /* Red to match heart icon */
+            color: white; 
+            border: none; 
+            border-radius: 15px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        a:hover, .btn-group button:hover { 
+            background-color: #5d1808; /* Darker shade for hover */
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #d3d3d3; /* Light grey background */
+            padding: 20px; /* Matching the thickness to model.html */
+            color: white;
+            width: 100%; /* Ensures the navbar stretches fully */
+            box-sizing: border-box; /* Ensures padding does not affect the width */
+        }
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: black; 
+            text-decoration: none;
+            font-weight: bold;
+            background-color: transparent; /* No background color to avoid highlighting */
+            padding: 0; /* No padding to avoid button-like appearance */
+            box-shadow: none; /* No shadow */
+        }
+        nav .heart {
+            margin-left: auto; /* Keeps the heart on the far right */
+            height: 30px; /* Adjust based on your preference */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/model1">Model 1</a></li>
+            <li><a href="/model2">Model 2</a></li>
+        </ul>
+        <img src="{{ url_for('static', filename='transparent_heart_image.png') }}" alt="Heart" class="heart">
+    </nav>
+    <div class="content">
+        <h1>Welcome to the ML Prediction Models Portal</h1>
+        <p>Select a model to make predictions:</p>
+        <a href="/model1">Go to Model 1 Prediction Page</a>
+        <a href="/model2">Go to Model 2 Prediction Page</a>
+    </div>
+</body>
+</html>
