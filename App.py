@@ -39,12 +39,14 @@ def model1_prediction():
         
         # Make a prediction
         prediction = model1.predict([features])[0]
-        print("Predicion for model1 : " + str(prediction))
+
         # Assign descriptions based on prediction
         if prediction == 1:
-            description = "You're probably gonna die"
+            prediction = "Patient is a risk"
+            description = "Patient is exhibiting symptoms linked with Coronary Heart Disease\n Conduct further tests to confirm validity of this claim\n"
         elif prediction == 0:
-            description = "You're probably fine"
+            prediction = "Patient is not a risk"
+            description = "Patient does not have symptom linked with Coronary Heart Disease.\n Patient should keep up their general health\n"
         else:
             description = "This is a general paragraph for other predictions."
             
